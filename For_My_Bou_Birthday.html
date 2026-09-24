@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For My Bou ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;background:linear-gradient(135deg,#160b18,#35142b,#160b18);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.card{width:min(92%,430px);padding:38px 25px;border:1px solid #ffffff30;border-radius:28px;background:#ffffff0d;backdrop-filter:blur(14px);box-shadow:0 20px 70px #0008}
+.heart{font-size:58px;animation:pulse 1.4s infinite}@keyframes pulse{50%{transform:scale(1.12)}}
+h1{font-size:34px;margin:12px 0;color:#ffd9e8}p{line-height:1.75;font-size:17px;color:#f8eaf0}
+button{border:0;border-radius:999px;padding:14px 25px;font-size:16px;background:#fff;color:#6d2148;cursor:pointer;font-weight:bold;margin-top:12px}
+.hidden{display:none}.message{animation:fade .9s ease}@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.small{font-size:13px;color:#dcbaca}.spark{position:fixed;font-size:20px;animation:fall 6s linear infinite;top:-30px}@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div id="start">
+    <div class="heart">🎁</div>
+    <h1>For My Bou ❤️</h1>
+    <p>Someone far away has a little surprise for you...</p>
+    <button onclick="openGift()">Tap to Open ✨</button>
+  </div>
+  <div id="content" class="hidden message">
+    <div class="heart">❤️</div>
+    <h1>Happy Birthday, Munia</h1>
+    <p>
+      Aj tomake amar kache nei, joriye dhore wish korte parchi na,
+      tomar kopale ekta kiss diye “Happy Birthday, bou” bolte parchi na.
+      Distance-ta ajke aro beshi feel hocche.
+    </p>
+    <p>
+      Kintu ekta distance-o amar mon theke tomake dure korte parbe na.
+      Tumi amar kache shudhu ekjon special manush na—
+      tumi amar bou, amar comfort, amar favourite person. ❤️
+    </p>
+    <p>
+      Tomar prottekta shopno puron hok, tomar hashi kokhono hariye na jak.
+      Ar mone rekho—onek dure thekeo ekjon manush tomake protidin
+      bhalobashe.
+    </p>
+    <h2>Next birthday, hopefully beside you. 🥹❤️</h2>
+    <p class="small">Until then, this hug is reserved for you. 🤗</p>
+  </div>
+</div>
+<script>
+function openGift(){
+ document.getElementById('start').classList.add('hidden');
+ document.getElementById('content').classList.remove('hidden');
+ for(let i=0;i<18;i++){
+   const s=document.createElement('div');s.className='spark';
+   s.textContent=['❤️','✨','💗','🌸'][Math.floor(Math.random()*4)];
+   s.style.left=Math.random()*100+'vw';
+   s.style.animationDelay=Math.random()*4+'s';
+   document.body.appendChild(s);
+ }
+}
+</script>
+</body>
+</html>
